@@ -1,0 +1,8 @@
+scikit-optimize
+scikit-learn
+pandas
+matplotlib
+seaborn
+xgboost
+imblearn
+numpy
