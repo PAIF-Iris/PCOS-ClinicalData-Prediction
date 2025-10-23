@@ -6,10 +6,13 @@ from sklearn.naive_bayes import GaussianNB
 from xgboost import XGBClassifier
 from functions.define_models import Models
 from functions.data_processing import processing_functions
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 model = Models()
 func = processing_functions()
-df = pd.read_csv(file_path)
+df = pd.read_csv(os.getenv("DATASET_PATH"))
 
 X_train, X_test, y_train, y_test = func.preprocess_data(df)
 

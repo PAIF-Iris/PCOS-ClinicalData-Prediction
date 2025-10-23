@@ -6,3 +6,4 @@ seaborn
 xgboost
 imblearn
 numpy
+python-dotenv
