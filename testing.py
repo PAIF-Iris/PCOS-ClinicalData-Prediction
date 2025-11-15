@@ -1,9 +1,4 @@
 import pandas as pd
-
-from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
-
-from sklearn.naive_bayes import GaussianNB
-from xgboost import XGBClassifier
 from functions.define_models import Models
 from functions.data_processing import processing_functions
 from dotenv import load_dotenv
@@ -14,23 +9,21 @@ model = Models()
 func = processing_functions()
 df = pd.read_csv(os.getenv("DATASET_PATH"))
 
+#preprocess data
 X_train, X_test, y_train, y_test = func.preprocess_data(df)
 
-base_models = [
-    ('rf', RandomForestClassifier(random_state=42)),
-    ('nb', GaussianNB()),
-    ('xgb', XGBClassifier(eval_metric='logloss', random_state=42)),
-    ('ada', AdaBoostClassifier(random_state=42))
-]
+#define model of your choice from define_models.py
+base_models = [model.baseModel_Logistic(), model.baseModel_KNN(), model.baseModel_SVM(), model.baseModel_RFC(), model.baseModel_XGB(), model.baseModel_AdaBoost(), model.baseModel_GaussianNB()]
+metalearner_model = model.metaLearner_neural_network()
 
-metalearner_model = model.metaLearner_RFC()
-
-model = func.make_model(
-    X_train, 
+#make and evaluate model
+output_model, params = func.make_model( 
     y_train, 
-    #base_models,
-    #metalearner_model
-    RandomForestClassifier(random_state=42)
+    X_train,
+    base_models,
+    metalearner_model
 )
 
-func.evaluate_model(model, X_test, y_test)
+acc, prec, rec, f1, conf_matrix = func.evaluate_model(output_model, X_test, y_test)
+print("Best Model Parameters: ", params)
+print(conf_matrix)

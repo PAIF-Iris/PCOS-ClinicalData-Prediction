@@ -1,0 +1,17 @@
+,Stacking (Y/N),base_model,meta_learner,Accuracy,Precision,Recall,F1-Score,confusion_matrix,best_model_params
+0,1,"(LogisticRegression(max_iter=1000, random_state=42, solver='liblinear'), KNeighborsClassifier(n_neighbors=20, weights='distance'))",RandomForestClassifier(random_state=42),0.8899082568807339,0.7857142857142857,0.9166666666666666,0.8461538461538461,"[[64  9]
+ [ 3 33]]","OrderedDict({'final_estimator__max_depth': 10, 'final_estimator__n_estimators': 166, 'm0__C': 0.11941772568339176, 'm1__n_neighbors': 44})"
+1,1,"(LogisticRegression(max_iter=1000, random_state=42, solver='liblinear'), SVC(kernel='linear', random_state=42))",RandomForestClassifier(random_state=42),0.8256880733944955,0.6808510638297872,0.8888888888888888,0.7710843373493976,"[[58 15]
+ [ 4 32]]","OrderedDict({'final_estimator__max_depth': 14, 'final_estimator__n_estimators': 155, 'm0__C': 4.1205556644879655, 'm1__C': 0.17679226616446445, 'm1__kernel': 'linear'})"
+2,1,"(KNeighborsClassifier(n_neighbors=20, weights='distance'), SVC(kernel='linear', random_state=42))",RandomForestClassifier(random_state=42),0.8899082568807339,0.8,0.8888888888888888,0.8421052631578947,"[[65  8]
+ [ 4 32]]","OrderedDict({'final_estimator__max_depth': 3, 'final_estimator__n_estimators': 50, 'm0__n_neighbors': 3, 'm1__C': 0.01, 'm1__kernel': 'linear'})"
+3,1,"(LogisticRegression(max_iter=1000, random_state=42, solver='liblinear'), KNeighborsClassifier(n_neighbors=20, weights='distance'), SVC(kernel='linear', random_state=42))",RandomForestClassifier(random_state=42),0.8807339449541285,0.7948717948717948,0.8611111111111112,0.8266666666666667,"[[65  8]
+ [ 5 31]]","OrderedDict({'final_estimator__max_depth': 3, 'final_estimator__n_estimators': 152, 'm0__C': 2.573776650630088, 'm1__n_neighbors': 3, 'm2__C': 0.1071656239609695, 'm2__kernel': 'linear'})"
+4,1,"(LogisticRegression(max_iter=1000, random_state=42, solver='liblinear'), KNeighborsClassifier(n_neighbors=20, weights='distance'))","LogisticRegression(max_iter=1000, random_state=42)",0.8807339449541285,0.7948717948717948,0.8611111111111112,0.8266666666666667,"[[65  8]
+ [ 5 31]]","OrderedDict({'final_estimator__C': 0.25453837415921954, 'm0__C': 0.35929484923380994, 'm1__n_neighbors': 3})"
+5,1,"(LogisticRegression(max_iter=1000, random_state=42, solver='liblinear'), SVC(kernel='linear', random_state=42))","LogisticRegression(max_iter=1000, random_state=42)",0.8899082568807339,0.8,0.8888888888888888,0.8421052631578947,"[[65  8]
+ [ 4 32]]","OrderedDict({'final_estimator__C': 10.0, 'm0__C': 0.2181067474192175, 'm1__C': 0.01, 'm1__kernel': 'rbf'})"
+6,1,"(KNeighborsClassifier(n_neighbors=20, weights='distance'), SVC(kernel='linear', random_state=42))","LogisticRegression(max_iter=1000, random_state=42)",0.8807339449541285,0.7948717948717948,0.8611111111111112,0.8266666666666667,"[[65  8]
+ [ 5 31]]","OrderedDict({'final_estimator__C': 10.0, 'm0__n_neighbors': 3, 'm1__C': 0.20477902287392255, 'm1__kernel': 'linear'})"
+7,1,"(LogisticRegression(max_iter=1000, random_state=42, solver='liblinear'), KNeighborsClassifier(n_neighbors=20, weights='distance'), SVC(kernel='linear', random_state=42))","LogisticRegression(max_iter=1000, random_state=42)",0.8807339449541285,0.7948717948717948,0.8611111111111112,0.8266666666666667,"[[65  8]
+ [ 5 31]]","OrderedDict({'final_estimator__C': 2.513906795829008, 'm0__C': 0.014218198667514136, 'm1__n_neighbors': 4, 'm2__C': 0.07557732882657729, 'm2__kernel': 'linear'})"
