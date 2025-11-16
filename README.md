@@ -1,6 +1,6 @@
 # PCOS Classification Machine Learning Models
 
-This repository implements and compares multiple supervised machine learning algorithms for predicting Polycystic Ovary Syndrome (PCOS) using clinical data. PCOS is a common hormonal disorder in women that can lead to irregular periods, acne, hair growth, weight gain, and infertility. The name refers to the multiple, small, fluid-filled sacs on the ovaries (follicles), which form when ovulation doesn't occur properly. PCOS is frequently misdiagnosed because its symptoms overlap with other conditions and can vary significantly between individuals.
+This repository implements and compares multiple supervised machine learning algorithms for predicting Polycystic Ovary Syndrome (PCOS) using clinical data. PCOS is a common hormonal disorder in women that can lead to irregular periods, acne, hair growth, weight gain, and infertility. PCOS is frequently misdiagnosed because its symptoms overlap with other conditions and can vary significantly between individuals.
 
 Although the default dataset is PCOS clinical data, all models and pipelines are fully generalizable to any tabular dataset.
 
@@ -14,7 +14,7 @@ This repo includes:
 
 ## What is StackingML?
 Stacking is a method where a ML model learns how to best combine the results (predictions) provided by each base model. 
-1. Each base model trains on the same training data.
+1. Each base model trains on the same training data
 2. Their outputs are stacked into a new vector
 3. The meta-learner model trains on this output vector and gives a final prediction
 
@@ -52,6 +52,7 @@ You can construct stacking models using any combination of base models and a met
 pip install -r requirements.txt
 ```
 2. Define dataset
+
 To run the repo, you must download and place a dataset of your choosing (or the PCOS dataset) in your project directory, then create a .env file containing path to this dataset:
 ```bash
 touch .env
@@ -61,7 +62,7 @@ You can train various ML or stacking ML models by customizing variables in testi
 ```bash
 python3 testing.py
 ```
-To iterate through all possible ML and stacking ML models defined in define_models.py, run compare.py, which will generate a .csv file as output (please note that this will take extensive computation power).
+To iterate through all possible ML and stacking ML models defined in define_models.py, run compare.py, which will generate a .csv file as output.
 ```bash
 python3 compare.py
 ```
